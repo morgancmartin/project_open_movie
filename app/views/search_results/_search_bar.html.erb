@@ -2,3 +2,4 @@
 <%= form_tag '/search_results', method: :get, class: '', role: 'user-search' do %>
   <%= search_field_tag :query, '', placeholder: 'Search for Movies', class: 'form-control col-xs-10' %>
 <% end %>
+<%= link_to 'Advanced Search', advanced_show_path %>

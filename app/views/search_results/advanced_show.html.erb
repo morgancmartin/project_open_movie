@@ -1,5 +1,5 @@
 <%= form_tag '/search_results', method: :get, class: '', role: 'user-search' do %>
-  <%= search_field_tag :query, '', placeholder: 'Search for Anything', class: 'form-control col-xs-10' %>
+  <%= search_field_tag :query, '', placeholder: 'Search for something specific', class: 'form-control col-xs-10' %>
   <% @movie.attribute_names.each do |attribute| %>
     <% next if ['id', 'created_at', 'updated_at'].include?(attribute) %>
     <li><%= label_tag attribute.capitalize %>
