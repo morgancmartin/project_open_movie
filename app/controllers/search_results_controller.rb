@@ -7,6 +7,7 @@ class SearchResultsController < ApplicationController
       type = sr_params[:query_type] == 'location' ? 'locations' : sr_params[:query_type]
       s.add_where_like_arg(type, sr_params[:query])
     end
+    @query = sr_params[:query]
     @results = s.get
   end
 

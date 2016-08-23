@@ -1,4 +1,5 @@
 <ul>
+  <%= content_tag(:p, "Your search: #{@query}") %>
 <% @results.each do |r|  %>
   <li><%= link_to r.locations, movie_path(movie: r)%></li>
 <% end %>
