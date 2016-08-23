@@ -1,0 +1,5 @@
+<% if current_user.first_name %>
+  <%= content_tag(:h1, "Welcome to your profile page, #{current_user.first_name}") %>
+<% else %>
+  <%= content_tag(:h1, 'Welcome to your profile page') %>
+<% end %>

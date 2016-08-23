@@ -1,0 +1,3 @@
+<% @result.each do |k,v| %>
+  <div class="row"><%= content_tag(:p, k + ': ', class: 'col-xs-3') %><%= content_tag(:p, v, class: 'col-xs-3') %></div>
+<% end %>

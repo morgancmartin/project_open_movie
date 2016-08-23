@@ -1,0 +1,5 @@
+<ul>
+<% @results.each do |r|  %>
+  <li><%= link_to r.locations, movie_path(movie: r)%></li>
+<% end %>
+</ul>
