@@ -3,7 +3,9 @@ class SearchResultsController < ApplicationController
   def index
     s = SodaAPI.new
     if sr_params[:query_type]
-      s.add_where_like_arg(sr_params[:query_type], sr_params[:query])
+      sr_params[:query_type] = 'locations' if sr_params[:query_type] == 'location'
+      type = sr_params[:query_type] == 'location' ? 'locations' : sr_params[:query_type]
+      s.add_where_like_arg(type, sr_params[:query])
     end
     @results = s.get
   end
